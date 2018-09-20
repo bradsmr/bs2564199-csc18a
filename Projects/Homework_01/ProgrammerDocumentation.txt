@@ -1,0 +1,5 @@
+Programmer Name: Bradley Summers
+Assignment Start: 9/18/2018
+Assignment Completion: 9/19/2018
+Total Hours for Assignment: 3 hours
+Comments: I enjoyed this assignment because it forced me to become more familiar with printf(). A change I would make to this assignment would be to have the user enter the sales made pre-tax rather than post-tax. That makes more sense to me rather than working backwards.
