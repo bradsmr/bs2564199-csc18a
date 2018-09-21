@@ -1,0 +1,5 @@
+Programmer Name: Bradley Summers
+Assignment Start: 9/21/2018
+Assignment Completion: 9/21/2018
+Total Hours for Assignment: 1 hour
+Comments: I enjoyed this assignment for the opportunity to explore for loops and arrays in Java.

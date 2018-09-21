@@ -1,4 +1,6 @@
 // a program to record / calculated monthly sales tax
+// author: Bradley Summers
+// date: 09/19/2018
 
 package monthlysalestax;
 import java.util.Scanner;
@@ -41,11 +43,11 @@ public class MonthlySalesTax {
         // display results
         o.println("\nMonth: " + month + ' ' + year);
         o.println("===============================");
-        o.printf("%-18s %c %,10.2f %n", "Total Collected:"  , '$' , totalSales);
-        o.printf("%-18s %c %,10.2f %n", "Sales:"            , '$' , sales);
-        o.printf("%-18s %c %,10.2f %n", "County Sales Tax:" , '$' , sales * countyTax);
-        o.printf("%-18s %c %,10.2f %n", "State Sales Tax:"  , '$' , sales * stateTax);
-        o.printf("%-18s %c %,10.2f %n", "Total Sales Tax:"  , '$' ,
+        o.printf("%18s %c %,10.2f %n", "Total Collected:"  , '$' , totalSales);
+        o.printf("%18s %c %,10.2f %n", "Sales:"            , '$' , sales);
+        o.printf("%18s %c %,10.2f %n", "County Sales Tax:" , '$' , sales * countyTax);
+        o.printf("%18s %c %,10.2f %n", "State Sales Tax:"  , '$' , sales * stateTax);
+        o.printf("%18s %c %,10.2f %n", "Total Sales Tax:"  , '$' ,
                 (sales * countyTax) + (sales * stateTax));
     }   
 }
