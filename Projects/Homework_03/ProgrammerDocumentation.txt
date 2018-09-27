@@ -1,0 +1,5 @@
+Programmer Name: Bradley Summers
+Assignment Start: 9/26/2018
+Assignment Completion: 9/26/2018
+Total Hours for Assignment: 2 hours
+Comments: I enjoyed this assignment because it gave me more practice with printf() and for loops.
