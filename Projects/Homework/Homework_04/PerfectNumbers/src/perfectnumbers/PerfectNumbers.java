@@ -14,6 +14,10 @@ public class PerfectNumbers {
         // display instructions & get input
         System.out.print("Enter the largest integer to try to display: ");
         int max = input.nextInt();
+
+        // warning for large numbers
+        if(max > 100000) System.out.println("Large number detected! "
+                + "Calculation may take a long time.");
         
         // check if every even number until max is perfect, display factors
         for(int i = 2; i <= max; i += 2) {            
@@ -31,13 +35,13 @@ public class PerfectNumbers {
         int sum = 0;
         
         for(int i=1; i < number; i++) {
-            if(number % i == 0) {                
+            if(number % i == 0) { // if i is a factor, add to the string                 
                 S = S + ' ' + i;
                 sum += i;
             }
         }
         
-        if(sum != number) S = null;
+        if(sum != number) S = null; // return null if number is not perfect
         return S;
     }
 }
