@@ -2,7 +2,8 @@
 // Assignment Start: 10/17/2018
 // Completion: 10/17/2018
 // Total Hours for Assignment: 3
-// Comments: 
+// Comments: I enjoyed learning how to use methods to calculate
+//           the standard deviation
 
 package summers.bradley.pkg5.arraystatistics;
 import java.util.Scanner;
@@ -55,17 +56,16 @@ public class SummersBradley5ArrayStatistics {
                 , stddev_sample(myArray));
     }
     
-   public static double stddev_pop(double ...a) {       
-        // 1. Find the mean of the data set
+    public static double stddev_pop(double ...a) {       
+        // Find the mean of the data set
         double mean = 0;
         for( int i=0; i < a.length; i++ ) {
             mean += a[i];
         }        
         mean /= a.length;
 
-        // 2. For each data point, find the square of its distance to the mean
-        // 3. Sum the values from step 2
-        
+        // For each data point, find the square of its distance to the mean
+        // & find the sum these values       
         double[] b = new double[a.length];
         double sum = 0;        
         for( int i=0; i < a.length; i++ ) {
@@ -73,22 +73,20 @@ public class SummersBradley5ArrayStatistics {
             sum += b[i];
         }
         
-        // 4. Divide by the number of data points
-        // 5. Take the square root
-        return Math.sqrt(sum / a.length);        
-   }
+        // Divide the sum by the number of data points and return the sqrt
+        return Math.sqrt(sum / a.length);
+    }
    
    public static double stddev_sample(double ...a) {       
-        // 1. Find the mean of the data set
+        // Find the mean of the data set
         double mean = 0;
         for( int i=0; i < a.length; i++ ) {
             mean += a[i];
         }        
         mean /= a.length;
 
-        // 2. For each data point, find the square of its distance to the mean
-        // 3. Sum the values from step 2
-        
+        // For each data point, find the square of its distance to the mean
+        // & find the sum these values       
         double[] b = new double[a.length];
         double sum = 0;        
         for( int i=0; i < a.length; i++ ) {
@@ -96,8 +94,7 @@ public class SummersBradley5ArrayStatistics {
             sum += b[i];
         }
         
-        // 4. Divide by the number of (data points - 1)
-        // 5. Take the square root
-        return Math.sqrt(sum / (a.length - 1));        
-   }
+        // Divide the sum by the number of data points and return the sqrt
+        return Math.sqrt(sum / (a.length - 1));
+    }
 }
