@@ -1,5 +1,5 @@
 Programmer Name: Bradley Summers
 Assignment Start: 10/10/2018
-Assignment Completion: 
-Total Hours for Assignment: 
-Comments: 
+Assignment Completion: 10/10/2018
+Total Hours for Assignment: 2
+Comments: This assignment was a little challenging and very intresting look into using methods and unique ways to use their return value to my advantage.
