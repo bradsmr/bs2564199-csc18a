@@ -1,5 +1,6 @@
 package fal18;
 
+/*
 // 25 pts total (15 points for correct implementation (3 pts per section below), 10 points code passes all unit test).
 // Refer to the UML class diagram for naming of all methods in this class: SnowMobileRentalUML.pdf
 
@@ -28,3 +29,43 @@ package fal18;
 //    b. In setter method for setting vin, throw a new IllegalArgumentException for
 //       any vin that has the number of characters greater than 20, with the
 //       exception message: "Vin cannot be more than 20 characters"
+*/
+
+public class SnowMobileRental extends SportShopRental {
+
+    private int     capacity = 1;
+    private String  vin      = "1A234567890123456789";
+    
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        if (capacity >= 1 && capacity <= 3)
+            this.capacity = capacity;
+        else
+            throw new IllegalArgumentException("Capacity out of range");
+    }
+
+    public String getVin() {
+        return vin;
+    }
+
+    public void setVin(String vin) {
+        if (vin.length() > 20)
+            throw new IllegalArgumentException("Vin cannot be more than 20 characters");
+        else
+            this.vin = vin;
+    }    
+    
+    @Override
+    public String toString() {
+        return String.format("Rental #%d, Cost: $%,7.2f, New: %b, Capacity: %1d seat, Vin: %s",
+                super.getRentalNumber(), super.getRentalCost(), super.isNewModel(), this.capacity, this.vin);
+    }
+    
+    @Override
+    public double lateCharge() {
+        return (this.getRentalCost() * (20 + getCapacity() * 5)) / 100; 
+    }    
+}

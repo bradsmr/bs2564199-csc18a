@@ -1,6 +1,6 @@
 package fal18;
 
-// 25 pts total (15 points for correct implementation (3 pts per section below), 10 points code passes all unit test).
+/* 25 pts total (15 points for correct implementation (3 pts per section below), 10 points code passes all unit test).
 // Refer to the UML class diagram for naming of all methods in this class: SnowboardRentalUML.pdf
 
 // 1. Create public class named SnowboardRental that inherits SportShopRental.
@@ -25,3 +25,46 @@ package fal18;
 //    a. In setter method for setting size, throw a new IllegalArgumentExcetion for
 //       any size that is less than 50 or greater than 180, with the exception message: 
 //       "Size out of range"
+*/
+
+public class SnowboardRental extends SportShopRental {
+    
+    private int     size      = 140;
+    private boolean freestyle = true;
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        if (size > 50 && size < 180)
+            this.size = size;
+        else
+            throw new IllegalArgumentException("size out of range");
+    }
+
+    public boolean isFreestyle() {
+        return freestyle;
+    }
+
+    public void setFreestyle(boolean freestyle) {
+        this.freestyle = freestyle;
+    }
+    
+    @Override
+    public String toString() {
+        String isFreestyle;
+        if (this.freestyle == true)
+            isFreestyle = "freestyle";
+        else
+            isFreestyle = "alpine";
+        
+        return String.format("Rental #%d, Cost: $%,7.2f, New: %b, Size: %4d cm, %s",
+                super.getRentalNumber(), super.getRentalCost(), super.isNewModel(), size, isFreestyle);
+    }
+    
+    @Override
+    public double lateCharge() {
+        return this.getRentalCost() * .2;
+    }
+}

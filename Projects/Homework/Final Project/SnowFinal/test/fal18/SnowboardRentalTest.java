@@ -72,8 +72,8 @@ public class SnowboardRentalTest {
     public void testToString() {
         System.out.println("Testing toString...");
         SnowboardRental instance = new SnowboardRental();
-        String expResult = "Rental #1, Cost: $  25.00, New: false, Size:  140 cm, freestyle";
-        String result = instance.toString();
+        String expResult = "Rental #1, Cost: $  25.00, New: false, Size:  140 cm, freestyle"; 
+       String result = instance.toString();
         assertEquals(expResult, result);
     }    
 }

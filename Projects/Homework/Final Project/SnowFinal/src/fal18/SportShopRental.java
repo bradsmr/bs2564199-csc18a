@@ -1,6 +1,6 @@
 package fal18;
 
-// 25 pts total (15 points for correct implementation (3 pts per section below), 10 points code passes all unit test).
+/* 25 pts total (15 points for correct implementation (3 pts per section below), 10 points code passes all unit test).
 // Refer to the UML class diagram for naming of all methods in this class: SportShopRentalUML.pdf
 
 // 1. Create abstract class named SportShotRental.
@@ -24,3 +24,49 @@ package fal18;
 //            {3} is the format specifier for boolean values.
 
 // 5. Create the abstract method lateCharge that takes no parameters and returns the late charge as a double.
+*/
+
+abstract class SportShopRental {
+    
+    private boolean newModel     = false;
+    private double  rentalCost   = 25.0;
+    private long    rentalNumber = 1;
+
+    public boolean isNewModel() {
+        return newModel;
+    }
+
+    public void setNewModel(boolean newModel) {
+        this.newModel = newModel;
+    }
+
+    public double getRentalCost() {
+        return rentalCost;
+    }
+
+    public void setRentalCost(double rentalCost) {
+        if (rentalCost > 0)
+            this.rentalCost = rentalCost;
+        else
+            throw new IllegalArgumentException("RentalCost out of range");
+    }
+
+    public long getRentalNumber() {
+        return rentalNumber;
+    }
+
+    public void setRentalNumber(long rentalNumber) {
+        if (rentalNumber < 1 || rentalNumber > 999999999)
+            this.rentalNumber = rentalNumber;
+        else
+            throw new IllegalArgumentException("RentalNumber out of range");
+    }
+    
+    @Override
+    public String toString() {
+        return String.format("Rental #%d, Cost: $%,7.2f, New: %b", 
+                rentalNumber, rentalCost, newModel);
+    }
+    
+    public abstract double lateCharge();  
+}
